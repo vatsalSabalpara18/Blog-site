@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog: Editor</title>
+
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/editor.css" />
+</head>
+
+<body>
+  <div class="banner">
+    <input type="file" accept="image/*" id="banner-upload" hidden />
+    <label for="banner-upload" class="banner-upload-btn"><img src="img/upload.jpg" alt="upload banner" /></label>
+  </div>
+
+  <div class="blog">
+    <textarea type="text" class="title" placeholder="Blog title..."></textarea>
+    <textarea type="text" class="article" placeholder="Start writing here..."></textarea>
+  </div>
+
+  <div class="blog-options">
+    <button class="btn dark publish-btn">publish</button>
+    <input type="file" accept="image/*" id="image-upload" hidden>
+    <label for="image-upload" class="btn grey upload-btn">Upload Image</label>
+  </div>
+
+  <!-- <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js"></script> -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore-compat.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.10.1/firebase-app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.10.1/firebase-firestore.js"></script> -->
+  <!-- <script type="module" src="js/firebase.js"></script> -->
+  <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore-compat.js"></script>
+  <script>
+    // Import the functions you need from the SDKs you need
+    // import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDS-nlvWNcRlF-TpVw2E1Bq1H8RggMIyyY",
+      authDomain: "blogging-website-b94a3.firebaseapp.com",
+      projectId: "blogging-website-b94a3",
+      storageBucket: "blogging-website-b94a3.appspot.com",
+      messagingSenderId: "926394430167",
+      appId: "1:926394430167:web:9104eac2e10305ce29f692",
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    const db = firebase.firestore();
+  </script>
+
+  <script src="js/editor.js"></script>
+</body>
+
+</html>
